@@ -19,7 +19,7 @@ const sass = require('gulp-sass');
 
 // Clean CSS
 function mincss() {
-  return src("src/css/*.css")
+  return src("css/*.css")
   .pipe(rename({suffix: ".min"}))
   .pipe(cleanCSS())
   .pipe(dest("./css"));
