@@ -1,0 +1,18 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Futura Book', sans-serif;
+  font-style: 14px; }
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive; }
+  .section-title__image::before, .section-title__image::after {
+    content: '';
+    display: inline-block;
+    vertical-align: text-top;
+    width: 32px;
+    height: 2px;
+    background-color: #000000; }
