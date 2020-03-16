@@ -159,7 +159,7 @@
   <!-- /.section section--dark projects -->
   <section class="section control">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title control__section-title section-title--light">
         <h2 class="section-title__heading">Онлайн-контроль</h2>
         <!-- /.section-title__heading-->
         <div class="section-title__image">
@@ -167,6 +167,30 @@
         </div>
         <!-- /.section-title__image-->
       </div>
+      <div class="control__video video">
+        <img src="img/play-icon.svg" alt="play icon" class="video__play">
+      </div>
+      <!-- /.control__video video -->
+      <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
+      <form action="" class="form control__form">
+        <div class="control__input-grupp">
+          <label for="user-name" class="label form__label control__label label--dark">Имя</label>
+          <input type="text" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+        </div>
+        <!-- /.control__input-grupp -->
+        <div class="control__input-grupp">
+          <label for="user-phone" class="label form__labe control__label label--dark">Телефон</label>
+          <input type="tel" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+        </div>
+        <!-- /.control__input-grupp -->
+        <buton class="button button--primary control__button">Отправить</buton>
+        <div class="policy control__policy">
+          <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__chekbox" checked>
+          <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+        </div>
+        <!-- /.policy -->
+      </form>
+      <!-- /.form control__form -->
     </div>
     <!-- /.container -->
 
@@ -362,11 +386,11 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
       <form action="" class="form modal__form">
         <label for="user-name" class="label form__label label--light">Имя</label>
-        <input type="text" class="input form__input modal__input" id="user-name" placeholder="Как вас зовут:">
+        <input type="text" class="input form__input modal__input--light" id="user-name" placeholder="Как вас зовут:">
         <label for="user-phone" class="label form__labe label--light">Телефон</label>
-        <input type="tel" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона:">
+        <input type="tel" class="input form__input modal__input--light" id="user-phone" placeholder="Ваш номер телефона:">
         <label for="user-email" class="label form__label label--light">Email</label>
-        <input type="email" class="input form__input modal__input" id="user-email" placeholder="Ваш email">
+        <input type="email" class="input form__input modal__input--light" id="user-email" placeholder="Ваш email">
         <div class="policy modal__policy">
           <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__chekbox" checked>
           <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
