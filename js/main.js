@@ -47,14 +47,46 @@ $(document).ready(function () {
 
   new WOW().init();
 
-});
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 100) {
-      if ($('#upbutton').is(':hidden')) {
-          $('#upbutton').css({opacity : 1}).fadeIn('slow');
+//плавная прокрутка вверх
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+        if ($('#upbutton').is(':hidden')) {
+            $('#upbutton').css({opacity : 1}).fadeIn('slow');
+        }
+    } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
+  });
+  $('#upbutton').click(function() {
+    $('html, body').stop().animate({scrollTop : 0}, 300);
+  });
+
+  //валидация формы
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+      },
+      userPhone: "required",
+      // правило-объект
+      userEmail: {
+        required: true,
+        email: true
       }
-  } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
-});
-$('#upbutton').click(function() {
-  $('html, body').stop().animate({scrollTop : 0}, 300);
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв" 
+      }, 
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }  
+  });
+  // маска для телефона
+  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
 });
