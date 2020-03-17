@@ -361,7 +361,8 @@ template {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -370,6 +371,8 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
 
 .upbutton {
   background: url("../img/up.png") no-repeat top left;
@@ -424,6 +427,8 @@ img {
     .section-title__heading {
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
       line-height: 138%; }
       .section-title__heading--primary {
         color: #E3B873; }
@@ -735,15 +740,17 @@ img {
   padding: 1.214rem 4rem;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1); }
 
-.design__description {
-  font-size: 1.42rem;
-  line-height: 1.93rem;
-  padding-top: 1rem;
-  padding-bottom: 3.5rem;
-  color: #363636;
-  max-width: 60%;
-  margin: auto;
-  text-align: center; }
+.design {
+  padding-bottom: 30rem; }
+  .design__description {
+    font-size: 1.42rem;
+    line-height: 1.93rem;
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+    color: #363636;
+    max-width: 60%;
+    margin: auto;
+    text-align: center; }
 
 .modal {
   opacity: 0;
@@ -843,7 +850,52 @@ img {
   width: auto;
   bottom: -1px; }
 
-@media screen and (max-width: 1200px) {
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-top: -20rem;
+    margin-bottom: 3.714rem;
+    padding: 2.5rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-grupp {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-grupp--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.685rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
+
+@media screen and (max-width: 1250px) {
   html {
     font-size: 12px; }
   .nav__item {
