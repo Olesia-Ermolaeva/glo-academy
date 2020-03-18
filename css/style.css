@@ -862,7 +862,7 @@ img {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
   .footer__wrap {
-    background-color: #181818;
+    background: #181818 url("../img/footer-form-bg.svg") no-repeat center/cover;
     max-width: 63.07rem;
     margin: auto;
     margin-top: -20rem;
@@ -907,6 +907,28 @@ img {
     margin-bottom: 4rem;
     max-width: 66rem;
     min-height: 33.2rem; }
+  .footer__contacts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 3.714rem;
+    margin-bottom: 3.07rem; }
+    .footer__contacts-text {
+      color: #E3B873;
+      font-family: 'Yeseva One', cursive;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.428rem;
+      line-height: 2rem;
+      text-align: center;
+      margin-bottom: 1.8rem; }
+    .footer__contacts-icon {
+      display: flex;
+      justify-content: center; }
+      .footer__contacts-icon-item {
+        margin-right: 1.07rem; }
 
 @media screen and (max-width: 1250px) {
   html {
