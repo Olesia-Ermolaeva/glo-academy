@@ -905,7 +905,8 @@ img {
   .footer__map {
     margin: auto;
     margin-bottom: 4rem;
-    max-width: 66rem; }
+    max-width: 66rem;
+    min-height: 33.2rem; }
 
 @media screen and (max-width: 1250px) {
   html {
