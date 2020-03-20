@@ -746,17 +746,15 @@ img {
   padding: 1.214rem 4rem;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1); }
 
-.design {
-  padding-bottom: 30rem; }
-  .design__description {
-    font-size: 1.42rem;
-    line-height: 1.93rem;
-    padding-top: 1rem;
-    padding-bottom: 3.5rem;
-    color: #363636;
-    max-width: 60%;
-    margin: auto;
-    text-align: center; }
+.design__description {
+  font-size: 1.42rem;
+  line-height: 1.93rem;
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
+  color: #363636;
+  max-width: 60%;
+  margin: auto;
+  text-align: center; }
 
 .modal {
   opacity: 0;
@@ -857,6 +855,69 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -1px; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.clients {
+  padding-bottom: 30rem; }
+  .clients__description {
+    max-width: 25.7rem;
+    margin: auto;
+    margin-top: 1.735rem;
+    margin-bottom: 2.785rem;
+    font-size: 1.428rem;
+    line-height: 1.928rem;
+    text-align: center; }
+  .clients__text {
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
+    .clients__text__title {
+      font-family: 'Yeseva One', cursive;
+      color: #181818;
+      font-size: 1.1rem;
+      line-height: 1.642rem;
+      padding-top: 1.93rem; }
+    .clients__text__image {
+      float: left;
+      margin: 2rem;
+      margin-bottom: 0; }
+    .clients__text__description {
+      display: block;
+      max-width: 23rem;
+      color: #959595;
+      font-size: 1.07rem;
+      line-height: 180%;
+      margin-left: 1.428rem;
+      padding-top: 0.3rem;
+      padding-bottom: 2rem; }
+  .clients__introductory {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -2rem;
+    background: #E3B873;
+    width: 21rem;
+    max-width: 80%;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+    .clients__introductory__area {
+      color: #fff;
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.214rem;
+      line-height: 1.714rem; }
+    .clients__introductory__duration {
+      color: #fff;
+      font-family: 'Yeseva One', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.214rem;
+      line-height: 1.714rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
