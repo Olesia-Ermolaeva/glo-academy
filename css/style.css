@@ -348,10 +348,13 @@ template {
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
-  color: #fff;
   padding: 0.5rem 0; }
   .input--light {
+    color: #fff;
     color: #fff; }
+  .input--dark {
+    color: #131313;
+    color: #131313; }
 
 .policy__chekbox {
   opacity: 0;
@@ -1038,7 +1041,9 @@ img {
       margin-bottom: 4.42rem; }
   .col-50 {
     width: 100%;
-    margin-top: 4rem; } }
+    margin-top: 4rem; }
+  .clients {
+    display: none; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {

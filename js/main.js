@@ -47,7 +47,7 @@ $(document).ready(function () {
 
   new WOW().init();
 
-//плавная прокрутка вверх
+  //плавная прокрутка вверх
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
         if ($('#upbutton').is(':hidden')) {
@@ -59,7 +59,7 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop : 0}, 300);
   });
 
-  //валидация формы
+  //валидация формы модального окна
   $('.modal__form').validate({
     errorClass: "invalid",
     rules: {
@@ -85,6 +85,45 @@ $(document).ready(function () {
         required: "Обязательно укажите email",
         email: "Введите в формате: name@domain.com"
       }
+    }  
+  });
+
+  // валидация формы онлайн-контроль
+  $(".control__form").validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+      },
+      userPhone: "required",
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв" 
+      }, 
+      userPhone: "Телефон обязателен",
+    }  
+  });
+
+  $("#footerForm").validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+      },
+      userPhone: "required",
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв" 
+      }, 
+      userPhone: "Телефон обязателен",
     }  
   });
 
