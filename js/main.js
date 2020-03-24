@@ -1,28 +1,18 @@
-/* document.addEventListener("DOMContentLoaded", function(event) { 
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  }
-
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-
-  closeBtn.addEventListener('click', switchModal);
-
-}); */
 $(document).ready(function () {
   var modal = $('.modal'),
       modalBtn = $('[data-toggle="modal"]'),
-      closeBtn = $('.modal__close');
+      closeBtn = $('.modal__close'),
+      modalSuccess = $ ('.modal__success'),
+      successCloseBtn = $('.modal__success__close');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
+  });
+  successCloseBtn.on('click', function () {
+    modalSuccess.toggleClass('modal__success--visible');
   });
 
   var mySwiper = new Swiper ('.swiper-container', {
@@ -92,9 +82,9 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+          $('.modal__success').addClass('modal__success--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса' + response);
@@ -148,34 +138,31 @@ $(document).ready(function () {
   // создание yandex карты
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-            center: [47.244729, 39.723187],
-            zoom: 15
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+      center: [47.244729, 39.723187],
+      zoom: 15
+      }),
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+    // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Вход со двора'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/map-marker.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наш офис',
+        balloonContent: 'Вход со двора'
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/map-marker.png',
+        // Размеры метки.
+        iconImageSize: [32, 32],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-5, -38]
+    });
 
-    myMap.geoObjects
-        .add(myPlacemark);
+
   });
 });
