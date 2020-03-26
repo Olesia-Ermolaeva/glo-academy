@@ -63,7 +63,8 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      // валидауия чекбокса
     }, //сообщения
     messages: {
       userName: {
