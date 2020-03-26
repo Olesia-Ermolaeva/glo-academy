@@ -134,35 +134,25 @@ $(document).ready(function () {
 
   // маска для телефона
   $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
-
-  // создание yandex карты
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-      center: [47.244729, 39.723187],
-      zoom: 15
-      }),
-
-    // Создаём макет содержимого.
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Наш офис',
-        balloonContent: 'Вход со двора'
-    }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/map-marker.png',
-        // Размеры метки.
-        iconImageSize: [32, 32],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-5, -38]
-    });
-
-
+});
+YaMapsShown = false;
+$(document).ready(function (){
+  $(window).scroll(function() {
+    if (!YaMapsShown){
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 700) {      
+      showYaMaps();
+      YaMapsShown = true;
+     }
+    }
   });
 });
+
+function showYaMaps(){
+  var script   = document.createElement("script");
+  script.type  = "text/javascript";
+  script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd34938594550b3ce2d66bcb5f2a1d7f673189f8678aa2a77ba2c843bf53da47&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false";
+  document.getElementById("YaMaps").appendChild(script);
+}
+
+
+
