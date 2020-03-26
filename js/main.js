@@ -64,7 +64,10 @@ $(document).ready(function () {
         required: true,
         email: true
       },
-      // валидауия чекбокса
+      // валидация чекбокса
+      policyCheckbox: {
+        required: true
+      }
     }, //сообщения
     messages: {
       userName: {
@@ -75,7 +78,8 @@ $(document).ready(function () {
       userEmail: {
         required: "Обязательно укажите email",
         email: "Введите в формате: name@domain.com"
-      }
+      },
+      policyCheckbox: "Согласитесь с обработкой данных"
     },
     submitHandler: function(form) {
       $.ajax({
@@ -104,6 +108,10 @@ $(document).ready(function () {
         minlength: 2,
       },
       userPhone: "required",
+      // валидация чекбокса
+      policyCheckbox: {
+        required: true
+      }
     }, //сообщения
     messages: {
       userName: {
@@ -111,7 +119,22 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв" 
       }, 
       userPhone: "Телефон обязателен",
-    }  
+      policyCheckbox: "Согласитесь с обработкой данных"
+    },  
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          $('.modal__success').addClass('modal__success--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса' + response);
+        }
+      });
+    }
   });
 
   $("#footerForm").validate({
@@ -123,6 +146,10 @@ $(document).ready(function () {
         minlength: 2,
       },
       userPhone: "required",
+      // валидация чекбокса
+      policyCheckbox: {
+        required: true
+      }
     }, //сообщения
     messages: {
       userName: {
@@ -130,6 +157,21 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв" 
       }, 
       userPhone: "Телефон обязателен",
+      policyCheckbox: "Согласитесь с обработкой данных"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          $('.modal__success').addClass('modal__success--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса' + response);
+        }
+      });
     }  
   });
 
