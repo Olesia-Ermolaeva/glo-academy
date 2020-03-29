@@ -20,7 +20,7 @@
     background: transparent
     color: $light  
 .label
-  font-size: 1.07rem
+  font-size: 1.2rem
   &--light
     color: rgba($light, 0.5)
 .input
@@ -33,6 +33,7 @@
     color: $light
     &::placeholder
     color: $light
+    font-size: 1.5rem
   &--dark
     color: $dark
     &::placeholder
@@ -41,14 +42,17 @@
   &__chekbox
     opacity: 0
     visibility: hidden
-    &:checked +
+    &:checked ~
       .policy__label
         &::before
           background: $primary url('../img/chek.svg') no-repeat center / 0.8rem        
   &__label
     display: flex
     align-items: center
-    font-size: 1.142rem
+    font-size: 1.28rem
+    font-style: normal
+    font-weight: normal
+    line-height: 1.571rem
     &::before
       content: ''
       width: 18px
@@ -70,18 +74,11 @@
   z-index: 999
 .input-group 
   position: relative 
-label
-  &.invalid
-    color: tomato
-    position: absolute
-    max-width: 100%
-    margin: auto
-input
-  &.invalid
-    border: 1px solid tomato
-    position: absolute
-    max-width: 100%
-    margin: auto
+em
+  &invalid
+  position: absolute
+  color: tomato
+  margin-left: 5rem
 
 
   

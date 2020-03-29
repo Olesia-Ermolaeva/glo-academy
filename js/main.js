@@ -51,14 +51,16 @@ $(document).ready(function () {
 
   //валидация формы модального окна
   $('.modal__form').validate({
-    errorClass: "invalid",
     rules: {
       // строчное правило
       userName: {
         required: true,
         minlength: 2,
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 10,
+      },
       // правило-объект
       userEmail: {
         required: true,
@@ -68,13 +70,19 @@ $(document).ready(function () {
       policyCheckbox: {
         required: true
       }
-    }, //сообщения
+    },
+    errorElement: "em",
+    errorClass: "invalid",
+    //сообщения
     messages: {
       userName: {
         required: "Имя обязательно",
         minlength: "Имя не короче двух букв" 
       }, 
-      userPhone: "Телефон обязателен",
+      userPhone: {
+        required: "Телефон обязателен",
+        minlength: "Введите телефон полностью" 
+      },
       userEmail: {
         required: "Обязательно укажите email",
         email: "Введите в формате: name@domain.com"
@@ -100,25 +108,33 @@ $(document).ready(function () {
 
   // валидация формы онлайн-контроль
   $(".control__form").validate({
-    errorClass: "invalid",
     rules: {
       // строчное правило
       userName: {
         required: true,
         minlength: 2,
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 10,
+      },
       // валидация чекбокса
       policyCheckbox: {
         required: true
       }
-    }, //сообщения
+    },
+    errorElement: "div",
+    errorClass: "invalid",
+    //сообщения
     messages: {
       userName: {
         required: "Имя обязательно",
         minlength: "Имя не короче двух букв" 
       }, 
-      userPhone: "Телефон обязателен",
+      userPhone: {
+        required: "Телефон обязателен",
+        minlength: "Введите телефон полностью" 
+      },
       policyCheckbox: "Согласитесь с обработкой данных"
     },  
     submitHandler: function(form) {
@@ -138,25 +154,33 @@ $(document).ready(function () {
   });
 
   $("#footerForm").validate({
-    errorClass: "invalid",
     rules: {
       // строчное правило
       userName: {
         required: true,
         minlength: 2,
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 10,
+      },
       // валидация чекбокса
       policyCheckbox: {
         required: true
       }
-    }, //сообщения
+    },
+    errorElement: "div",
+    errorClass: "invalid",
+    //сообщения
     messages: {
       userName: {
         required: "Имя обязательно",
         minlength: "Имя не короче двух букв" 
       }, 
-      userPhone: "Телефон обязателен",
+      userPhone: {
+        required: "Телефон обязателен",
+        minlength: "Введите телефон полностью" 
+      },
       policyCheckbox: "Согласитесь с обработкой данных"
     },
     submitHandler: function(form) {
@@ -198,7 +222,7 @@ YaMapsShown = false;
 $(document).ready(function (){
   $(window).scroll(function() {
     if (!YaMapsShown){
-     if($(window).scrollTop() + $(window).height() > $(document).height() - 700) {      
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 30) {      
       showYaMaps();
       YaMapsShown = true;
      }

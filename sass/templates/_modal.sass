@@ -18,39 +18,42 @@
     visibility: visible
   &__dialog
     position: relative
-    max-width: 36.36rem
-    background: $dark url('../img/bg-lines.svg') no-repeat center
-    padding: 2.357rem 3.5rem 1.928rem
+    max-width: 40rem
+    background: $dark url('../img/bg-lines.svg') no-repeat center / cover
+    padding: 2.49rem 3.8rem 1.928rem
     color: $light
   &__close
     position: absolute
     right: 0
     top: 0
-    width: 28px
-    height: 28px
+    width: 33px
+    height: 33px
     background: transparent url('../img/close.svg') no-repeat center
     border: none
-    margin: 12px
+    margin: 0.9rem
     cursor: pointer
   &__title
     font-family: 'Yeseva One', cursive
-    font-size: 1.357rem
+    font-size: 1.5rem
+    font-style: normal
+    font-weight: normal
+    line-height: 2.1rem
     text-align: center
     margin: 0
-    margin-bottom: 2.428rem
   &__form
     display: flex
     flex-direction: column
   &__input
-    &-grupp
+    &-group
       display: flex
       flex-direction: column 
-      margin-bottom: 3.428rem
-    &:last-of-type
-      margin-bottom: 1rem
+      margin-top: 2.3rem 
+      margin-bottom: 1.3rem
   &__policy
+    margin-top: -1.3rem
     margin-bottom: 2.7rem
   &__button
     align-self: flex-end
+    padding: 1.6rem 4.4rem
 
 
