@@ -123,7 +123,7 @@ $(document).ready(function () {
         required: true
       }
     },
-    errorElement: "div",
+    errorElement: "ec",
     errorClass: "invalid",
     //сообщения
     messages: {
@@ -169,7 +169,7 @@ $(document).ready(function () {
         required: true
       }
     },
-    errorElement: "div",
+    errorElement: "ef",
     errorClass: "invalid",
     //сообщения
     messages: {
@@ -200,7 +200,7 @@ $(document).ready(function () {
   });
 
   // маска для телефона
-  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "Ваш номер телефона:"});
   var player;
   $('.video__play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -222,7 +222,7 @@ YaMapsShown = false;
 $(document).ready(function (){
   $(window).scroll(function() {
     if (!YaMapsShown){
-     if($(window).scrollTop() + $(window).height() > $(document).height() - 30) {      
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 500) {      
       showYaMaps();
       YaMapsShown = true;
      }
