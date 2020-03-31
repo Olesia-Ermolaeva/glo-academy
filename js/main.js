@@ -200,7 +200,7 @@ $(document).ready(function () {
   });
 
   // маска для телефона
-  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "Ваш номер телефона:"});
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
   var player;
   $('.video__play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -236,6 +236,13 @@ function showYaMaps(){
   script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd34938594550b3ce2d66bcb5f2a1d7f673189f8678aa2a77ba2c843bf53da47&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false";
   document.getElementById("YaMaps").appendChild(script);
 }
+
+// прокрутка якорных ссылок
+$("body").on('click', '[href*="#"]', function(e){
+  var fixed_offset = 100;
+  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+  e.preventDefault();
+});
 
 
 
