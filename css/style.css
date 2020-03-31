@@ -575,20 +575,28 @@ img {
     margin-left: 4.28rem;
     margin-top: 0; }
   .hero__title {
-    margin-bottom: 1rem; }
+    font-style: normal;
+    font-weight: normal; }
   .hero__text {
     font-size: 1.57rem;
     line-height: 133%;
     max-width: 500px;
-    margin: 0; }
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 3.1rem; }
   .hero__button {
-    margin-right: 20px;
-    padding: 18px 29px;
+    margin-right: 18px;
+    outline: none;
     font-size: 1rem; }
+    .hero__button__outline {
+      padding: 18px 42px; }
+    .hero__button__primary {
+      padding: 18px 23px; }
   .hero__instagram {
     position: absolute;
     left: 0;
     top: 0;
+    margin-top: -1.5rem;
     max-width: 80px;
     height: 100%; }
   .hero__scroll-down {
@@ -1164,16 +1172,47 @@ img {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .hero .button:hover {
+    cursor: default; }
+  .hero .button--primary {
+    color: #fff;
+    background-color: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s; }
+    .hero .button--primary:hover {
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); } }
 
 @media screen and (max-width: 760px) {
   .row {
     flex-direction: column;
     align-items: center; }
+  .contacts__phone {
+    margin-right: 0;
+    color: #fff;
+    text-decoration: none; }
+  .contacts__button {
+    display: none; }
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
+  .hero__scroll-down {
+    display: none; }
+  .hero__content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 7.08rem;
+    margin-bottom: 5.08rem; }
+  .hero__text {
+    font-size: 1.5rem;
+    margin-bottom: 2.66rem; }
+  .hero__button {
+    display: block;
+    max-width: 100vh;
+    margin-bottom: 2.16rem; }
   .design {
     background-color: #131313; }
     .design__description {
@@ -1246,14 +1285,19 @@ img {
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 22.86rem; }
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 7.08rem;
+    margin-bottom: 5.08rem; }
   .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
+    font-size: 1.5rem;
+    margin-bottom: 2.66rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    max-width: 100vh;
+    margin-bottom: 2.16rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {

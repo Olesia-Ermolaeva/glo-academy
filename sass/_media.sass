@@ -12,16 +12,50 @@
       display: none
     &__content
       margin-left: 0
+    .button
+      &:hover
+        cursor: default   
+      &--primary
+        color: $light
+        background-color: $primary
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
+        transition: box-shadow 0.3s
+        &:hover
+          box-shadow: 0px 5px 15px rgba($primary, 0.2)  
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
     align-items: center
+  .contacts
+    &__phone
+      margin-right: 0
+      color: $light
+      text-decoration: none
+    &__button
+      display: none
   .types
     &__card
       margin-bottom: 5rem
   .card
     &__text
       margin-left: 0
+  .hero
+    &__scroll-down
+      display: none
+    &__content
+      max-width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-top: 7.08rem
+      margin-bottom: 5.08rem
+    &__text
+      font-size: 1.5rem
+      margin-bottom: 2.66rem
+    &__button
+      display: block
+      max-width: 100vh
+      margin-bottom: 2.16rem
   .design
     background-color: $dark
     &__description
@@ -97,14 +131,19 @@
     &__scroll-down
       display: none
     &__content
-      max-width: 22.86rem
+      max-width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-top: 7.08rem
+      margin-bottom: 5.08rem
     &__text
-      font-size: 1.29rem
-      margin-bottom: 2.28rem
+      font-size: 1.5rem
+      margin-bottom: 2.66rem
     &__button
       display: block
-      min-width: 22.86rem
-      margin-bottom: 1.85rem
+      max-width: 100vh
+      margin-bottom: 2.16rem
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down

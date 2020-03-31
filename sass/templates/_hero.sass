@@ -28,20 +28,28 @@
     margin-left: 4.28rem
     margin-top: 0
   &__title
-    margin-bottom: 1rem
+    font-style: normal
+    font-weight: normal
   &__text
     font-size: 1.57rem
     line-height: 133%
     max-width: 500px
     margin: 0
+    margin-top: 1rem
+    margin-bottom: 3.1rem
   &__button
-    margin-right: 20px
-    padding: 18px 29px
+    margin-right: 18px
+    outline: none
     font-size: 1rem
+    &__outline
+      padding: 18px 42px
+    &__primary
+      padding: 18px 23px
   &__instagram
     position: absolute
     left: 0
     top: 0
+    margin-top: -1.5rem
     max-width: 80px
     height: 100%
   &__scroll-down
@@ -69,7 +77,6 @@
       border: 1px solid $primary
       border-radius: 50%
       margin-left: 1.1rem
-
 .instagram
   background-color: $dark
   display: flex
