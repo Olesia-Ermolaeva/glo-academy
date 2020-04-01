@@ -1,4 +1,5 @@
 .projects
+  padding-top: 9rem
   padding-bottom: 30rem
   &__text
     font-family: 'Futura Book', sans-serif
@@ -10,13 +11,17 @@
     max-width: 31.57rem
     margin-bottom: 2rem
 .swiper
+  &-container
+    &__description
+      max-width: 27rem
+      margin: 0
   &-slide
     display: flex
     flex-wrap: wrap
     position: relative
     &__text
       flex-basis: 50%
-      margin-bottom: 5rem
+      margin-bottom: 1.9rem
       max-width: 442px
     &__heading
       font-size: 1.285rem
@@ -30,9 +35,15 @@
       line-height: 1.428rem
   &-pagination
     &-bullet
+      position: absolute
+      top: -0.8rem
+      margin-right: 35px
       background-color: rgba($light, 0.3)
       &-active
         background-color: $light
+  &__navbuttons
+    margin-top: 5.5rem
+    position: relative
   &-button                                       
     &-prev, &-next
       top: auto
