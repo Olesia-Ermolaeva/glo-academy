@@ -5,24 +5,6 @@
     &__item
       margin-right: 1rem
 @media screen and ( max-width: 992px )
-  .nav
-    display: none
-  .hero
-    &__instagram
-      display: none
-    &__content
-      margin-left: 0
-    .button
-      &:hover
-        cursor: default   
-      &--primary
-        color: $light
-        background-color: $primary
-        box-shadow: 0px 5px 15px rgba($primary, 0.2)
-        transition: box-shadow 0.3s
-        &:hover
-          box-shadow: 0px 5px 15px rgba($primary, 0.2)  
-@media screen and ( max-width: 760px )
   .wow
     transition-property: none !important
     transform: none !important
@@ -30,6 +12,90 @@
   .row
     flex-direction: column
     align-items: center
+    justify-content: center
+  .col-30
+    flex-basis: 100%
+  .section
+    padding: 0
+  .nav
+    display: none
+  .button
+    &:hover
+      cursor: default   
+    &--primary
+      color: $light
+      background-color: $primary
+      box-shadow: 0px 5px 15px rgba($primary, 0.2)
+      transition: box-shadow 0.3s
+      &:hover
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
+  .hero
+    &__instagram
+      display: none
+    &__content
+      margin-left: 0
+    .card
+      &__pricetag
+        position: absolute
+        left: 0
+        bottom: -1.79rem
+        font-size: 0.8rem
+        font-family: 'Yeseva One', cursive
+        text-transform: uppercase
+        background-color: $primary
+        color: $light
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
+  .footer
+    background: $dark
+    &__wrap
+      display: flex
+      flex-direction: column
+      justify-content: center
+      &--black
+        background: $dark
+        flex-basis: 100%
+        margin: 0
+    &__form
+      display: flex
+      flex-direction: column
+      align-items: space-between
+      flex-basis: 100%
+    &__menu
+      display: none
+    &__map
+      margin-top: 5rem
+      max-width: 90%
+    &__button
+      margin: 0
+    &__contacts
+      order: 1 
+  .modal
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 199
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.6)
+    display: flex
+    align-items: center
+    justify-content: center
+    &--visible
+      opacity: 1
+      visibility: visible
+    &__dialog
+      position: relative
+      overflow: auto
+      max-width: 100%
+      height: 100vh
+      background: $dark url('../img/bg-lines.svg') no-repeat center / cover
+      padding: 2.49rem 3.8rem 1.928rem
+      color: $light
+@media screen and ( max-width: 760px )
   .contacts
     &__phone
       margin-right: 0
@@ -38,6 +104,7 @@
     &__button
       display: none
   .section
+    padding: 0
     &-title
       &__heading
         font-style: normal
@@ -50,9 +117,6 @@
   .types
     &__card
       margin-bottom: 5rem
-  .card
-    &__text
-      margin-left: 0
   .hero
     &__scroll-down
       display: none
@@ -73,12 +137,6 @@
       display: block
       max-width: 100vh
       margin-bottom: 2.16rem
-  .projects
-    margin-top: -4rem
-    padding-top: 0rem
-    .swiper
-      &__navbuttons
-        margin-top: 2rem
   .design
     background-color: $dark
     &__description
@@ -94,14 +152,28 @@
       color: $light
     &__form
       flex-direction: column
-    &__input-grupp
-      margin-bottom: 4.5rem
-      flex-wrap: nowrap
       flex-basis: 100%
+      margin: 0
+    &__input-group
+      flex-basis: 100%
+      display: flex
+      flex-direction: column
+      margin-bottom: 5rem
+    &__label
+      color: rgba($light, 0.5)
+    &__input
+      &--dark
+        &::placeholder
+          font-style: normal
+          font-weight: normal
+          font-size: 1.285rem
+          line-height: 1.714rem
+          color: $light
     &__button
       text-align: center
       order: 1
     &__policy
+      margin-top: -4.5rem
       &-label
         justify-content: start 
         margin-bottom: 4.42rem
