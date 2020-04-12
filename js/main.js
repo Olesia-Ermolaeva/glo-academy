@@ -222,7 +222,7 @@ YaMapsShown = false;
 $(document).ready(function (){
   $(window).scroll(function() {
     if (!YaMapsShown){
-     if($(window).scrollTop() + $(window).height() > $(document).height() - 500) {      
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 700) {      
       showYaMaps();
       YaMapsShown = true;
      }

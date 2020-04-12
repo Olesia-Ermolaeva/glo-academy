@@ -9,14 +9,6 @@
     transition-property: none !important
     transform: none !important
     animation: none !important
-  .row
-    flex-direction: column
-    align-items: center
-    justify-content: center
-  .col-30
-    flex-basis: 100%
-  .section
-    padding: 0
   .nav
     display: none
   .button
@@ -45,30 +37,6 @@
         background-color: $primary
         color: $light
         box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
-  .footer
-    background: $dark
-    &__wrap
-      display: flex
-      flex-direction: column
-      justify-content: center
-      &--black
-        background: $dark
-        flex-basis: 100%
-        margin: 0
-    &__form
-      display: flex
-      flex-direction: column
-      align-items: space-between
-      flex-basis: 100%
-    &__menu
-      display: none
-    &__map
-      margin-top: 5rem
-      max-width: 90%
-    &__button
-      margin: 0
-    &__contacts
-      order: 1 
   .modal
     opacity: 0
     visibility: hidden
@@ -92,10 +60,19 @@
       overflow: auto
       max-width: 100%
       height: 100vh
-      background: $dark url('../img/bg-lines.svg') no-repeat center / cover
+      background: $dark 
       padding: 2.49rem 3.8rem 1.928rem
       color: $light
 @media screen and ( max-width: 760px )
+  .row
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  .col-30
+    flex-basis: 100%
+    width: 100%
+  .col-50
+    width: 100%
   .contacts
     &__phone
       margin-right: 0
@@ -111,13 +88,87 @@
         font-weight: normal
         font-size: 1.833rem
         line-height: 138.6%
+        margin-bottom: 0.5rem
       &__word
         &::after
           display: none
   .types
     &__card
       margin-bottom: 5rem
+  .projects
+    padding-top: 3rem
+    padding-bottom: 0
+    &__text
+      font-family: 'Futura Book', sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 1.285rem
+      line-height: 1.9rem
+      text-transform: none
+      max-width: 25.41rem
+      margin-top: 2rem
+      margin-bottom: 2rem
+  .swiper
+    &-container
+      &__description
+        max-width: 27rem
+        margin: 0
+      &__photo
+        margin-top: 2.8rem
+    &-slide
+      display: flex
+      flex-wrap: wrap
+      position: relative
+      &__text
+        flex-basis: 50%
+        margin-bottom: 1.3rem
+        max-width: 442px
+      &__heading
+        font-size: 1.16rem
+        line-height: 138.6%
+        font-style: normal
+        font-weight: normal
+        font-family: 'Yeseva One', cursive
+        color: $primary
+        text-transform: uppercase
+        margin-bottom: 0.9rem
+      &__value
+        font-size: 1.15rem
+        line-height: 135.84%
+        font-style: normal
+        font-weight: normal
+    &-pagination
+      &-bullet
+        position: absolute
+        top: -0.8rem
+        margin-right: 35px
+        background-color: rgba($light, 0.3)
+        &-active
+          background-color: $light
+    &__navbuttons
+      margin-top: 3rem
+      margin-bottom: 3rem
+      position: relative
+    &-button                                       
+      &-prev, &-next
+        top: auto
+        bottom: 0
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &::after
+          display: none
+      &-prev
+        left: 0
+        background: url('../img/arrow-prev.svg') no-repeat center
+      &-next
+        background: url('../img/arrow-next.svg') no-repeat center
+  .swiper-container-horizontal>.swiper-pagination-bullets
+    width: auto
+    bottom: -1px
   .hero
+    &::after
+      display: none
     &__scroll-down
       display: none
     &__content
@@ -125,11 +176,13 @@
       display: flex
       flex-direction: column
       justify-content: center
-      margin-top: 7.08rem
+      margin-top: 2rem
       margin-bottom: 5.08rem
     &__title
-      font-size: 1.916rem
+      font-size: 2rem
       line-height: 132.83%
+      font-style: normal
+      font-weight: normal
     &__text
       font-size: 1.5rem
       margin-bottom: 2.66rem
@@ -137,15 +190,13 @@
       display: block
       max-width: 100vh
       margin-bottom: 2.16rem
-  .design
-    background-color: $dark
-    &__description
-      color: $light
-    &__section-title
-      color: $light
-    &__card
-      margin-bottom: 5rem
+      font-weight: 500
+      font-size: 1.08rem
+      line-height: 1.25rem
+      text-align: center
+      text-transform: uppercase
   .control
+    padding-top: 32.5rem
     background-color: $dark
     color: $light
     &__label
@@ -172,6 +223,14 @@
     &__button
       text-align: center
       order: 1
+      margin-bottom: -2.3rem
+      font-style: normal
+      font-weight: 500
+      font-size: 1.25rem
+      line-height: 2.166rem
+      padding: 1.1rem 4.785rem
+      outline: none
+      box-sizing: border-box
     &__policy
       margin-top: -4.5rem
       &-label
@@ -181,13 +240,37 @@
       &invalid
       margin-left: 25rem
       margin-top: -0.5rem
-  .col-50
-    width: 100%
-    margin-top: 4rem
-  .col-30
-    width: 100%
-  .clients
-    display: none
+    &__video
+      max-width: 90%
+      min-height: 21.25‬rem
+      margin: auto
+      margin-top: 3.5rem
+      margin-bottom: 2.2rem
+    &__text
+      max-width: 28.33rem
+      margin: auto
+      margin-bottom: 3rem
+      text-align: center
+      font-style: normal
+      font-weight: normal
+      font-size: 1.166rem
+      line-height: 169.8%
+    &::before
+      content: ''
+      display: block
+      margin: auto
+      width: 55px
+      height: 2px
+      background-color: $primary
+      border-radius: 30px
+  .design
+    background-color: $dark
+    &__description
+      color: $light
+    &__section-title
+      color: $light
+    &__card
+      margin-bottom: 5rem
   .footer
     background: $dark
     &__wrap
@@ -202,12 +285,24 @@
       display: flex
       flex-direction: column
       flex-basis: 100%
-      margin: 0
+      margin: auto
     &__menu
       display: none
     &__map
-      margin-top: 5rem
+      margin-top: 10rem
+      margin-bottom: 4rem
       max-width: 90%
+      min-height: 21.25‬rem
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba($dark, 0.4)
+        z-index: 99
     &__button
       margin: 0
     &__contacts
@@ -232,6 +327,11 @@
       justify-content: center
       margin-top: 7.08rem
       margin-bottom: 5.08rem
+    &__title
+      font-size: 2rem
+      line-height: 132.83%
+      font-style: normal
+      font-weight: normal
     &__text
       font-size: 1.5rem
       margin-bottom: 2.66rem
