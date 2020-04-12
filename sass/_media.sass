@@ -88,13 +88,17 @@
         font-weight: normal
         font-size: 1.833rem
         line-height: 138.6%
-        margin-bottom: 0.5rem
+        margin-bottom: 1.5rem
       &__word
         &::after
           display: none
   .types
+    &__section-title
+      padding-top: 5rem
+      padding-bottom: 1rem
     &__card
       margin-bottom: 5rem
+  
   .projects
     padding-top: 3rem
     padding-bottom: 0
@@ -115,6 +119,8 @@
         margin: 0
       &__photo
         margin-top: 2.8rem
+        width: 95%
+        max-height: 70vh
     &-slide
       display: flex
       flex-wrap: wrap
@@ -139,9 +145,6 @@
         font-weight: normal
     &-pagination
       &-bullet
-        position: absolute
-        top: -0.8rem
-        margin-right: 35px
         background-color: rgba($light, 0.3)
         &-active
           background-color: $light
@@ -167,12 +170,19 @@
     width: auto
     bottom: -1px
   .hero
+    position: relative
+    display: flex
+    flex-direction: column
+    background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
+    height: 100%
+    color: $light
     &::after
       display: none
     &__scroll-down
       display: none
     &__content
-      max-width: 100%
+      width: 100%
+      max-height: 100vh
       display: flex
       flex-direction: column
       justify-content: center
@@ -197,10 +207,17 @@
       text-transform: uppercase
   .control
     padding-top: 32.5rem
+    padding-bottom: 12rem
     background-color: $dark
     color: $light
     &__label
       color: $light
+      font-style: normal
+      font-weight: normal
+      font-size: 1.25rem
+      line-height: 1.666rem
+      color: rgba($light, 0.5)
+      margin-bottom: 0.02rem
     &__form
       flex-direction: column
       flex-basis: 100%
@@ -210,20 +227,18 @@
       display: flex
       flex-direction: column
       margin-bottom: 5rem
-    &__label
-      color: rgba($light, 0.5)
     &__input
       &--dark
         &::placeholder
           font-style: normal
           font-weight: normal
-          font-size: 1.285rem
-          line-height: 1.714rem
+          font-size: 1.5rem
+          line-height: 138.72%
           color: $light
     &__button
       text-align: center
       order: 1
-      margin-bottom: -2.3rem
+      margin-bottom: -14rem
       font-style: normal
       font-weight: 500
       font-size: 1.25rem
@@ -232,10 +247,15 @@
       outline: none
       box-sizing: border-box
     &__policy
-      margin-top: -4.5rem
+      margin-top: -4rem
+      margin-bottom: 1.1rem
       &-label
         justify-content: start 
         margin-bottom: 4.42rem
+        font-style: normal
+        font-weight: normal
+        font-size: 1.333rem
+        line-height: 1.833rem
     ec
       &invalid
       margin-left: 25rem
@@ -249,20 +269,29 @@
     &__text
       max-width: 28.33rem
       margin: auto
-      margin-bottom: 3rem
+      margin-bottom: 2.5rem
       text-align: center
       font-style: normal
       font-weight: normal
       font-size: 1.166rem
       line-height: 169.8%
-    &::before
-      content: ''
-      display: block
-      margin: auto
-      width: 55px
-      height: 2px
-      background-color: $primary
-      border-radius: 30px
+      &::before
+        content: ''
+        display: block
+        margin: auto
+        margin-bottom: 1.1rem
+        width: 55px
+        height: 2px
+        background-color: $primary
+        border-radius: 30px
+  .label
+    color: $light
+    font-style: normal
+    font-weight: normal
+    font-size: 1.25rem
+    line-height: 1.666rem
+    color: rgba($light, 0.5)
+    margin-bottom: 0.02rem
   .design
     background-color: $dark
     &__description
