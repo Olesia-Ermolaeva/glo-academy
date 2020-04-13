@@ -66,15 +66,6 @@
     max-width: 66rem
     min-height: 33.2rem
     position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: rgba($dark, 0.4)
-      z-index: 99
   &__contacts
     display: flex
     justify-content: center
@@ -91,13 +82,17 @@
       font-size: 1.428rem
       line-height: 2rem
       text-align: center
+      margin: auto
       margin-bottom: 1.8rem
+      max-width: 42.07rem
     &-icon
       display: flex
       justify-content: center
       &-item
         margin-left: 0.5rem
         margin-right: 0.5rem
+      &-mobile
+        display: none
 
 
 
