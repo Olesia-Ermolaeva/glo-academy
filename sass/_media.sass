@@ -79,6 +79,9 @@
       padding: 2.49rem 3.8rem 1.928rem
       color: $light
 @media screen and ( max-width: 760px )
+  .container
+    width: 90%
+    margin: auto
   .row
     flex-direction: column
     align-items: center
@@ -246,7 +249,7 @@
       display: flex
       flex-direction: column
       justify-content: center
-      margin-top: 2rem
+      margin-top: 7.08rem
       margin-bottom: 5.08rem
     &__title
       font-size: 2rem
@@ -270,6 +273,10 @@
     padding-bottom: 12rem
     background-color: $dark
     color: $light
+    &__video
+      max-width: 28.33rem
+      min-height: 17.25rem
+      background: $dark url('../img/video-mask.jpg') no-repeat center / cover
     &__label
       color: $light
       font-style: normal
@@ -289,6 +296,12 @@
       margin-bottom: 5rem
     &__input
       &--dark
+        color: $light
+        font-style: normal
+        font-weight: normal
+        font-size: 1.5rem
+        line-height: 138.72%
+        padding-top: 0
         &::placeholder
           font-style: normal
           font-weight: normal
@@ -307,7 +320,8 @@
       outline: none
       box-sizing: border-box
     &__policy
-      margin-top: -4rem
+      margin-top: -4.5rem
+      margin-left: 0rem
       margin-bottom: 1.1rem
       &-label
         justify-content: start 
@@ -316,10 +330,6 @@
         font-weight: normal
         font-size: 1.333rem
         line-height: 1.833rem
-    ec
-      &invalid
-      margin-left: 25rem
-      margin-top: -0.5rem
     &__video
       max-width: 90%
       min-height: 21.25‬rem
@@ -334,7 +344,7 @@
       font-style: normal
       font-weight: normal
       font-size: 1.166rem
-      line-height: 169.8%
+      line-height: 165%
       &::before
         content: ''
         display: block
@@ -344,6 +354,13 @@
         height: 2px
         background-color: $primary
         border-radius: 30px
+  ec
+    &invalid
+    position: absolute
+    display: block
+    color: tomato
+    margin-top: 1.5rem
+    margin-left: 10rem
   .label
     color: $light
     font-style: normal
@@ -358,7 +375,7 @@
     padding-top: 27.5rem
     background-color: $dark
     &__description
-      max-width: 25.5‬rem
+      max-width: 24rem
       padding-top: 1.5rem
       padding-bottom: 3.5rem
       color: $light

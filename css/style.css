@@ -422,7 +422,7 @@ ef {
   margin-top: 3rem; }
 
 .container {
-  width: 89%;
+  width: 75%;
   margin: auto; }
 
 .row {
@@ -446,8 +446,15 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
 
+a {
+  text-decoration: none; }
+
 img {
   max-width: 100%; }
+
+*:active, *:hover, *:focus {
+  outline: 0;
+  outline-offset: 0; }
 
 .section {
   padding: 60px 0; }
@@ -752,6 +759,8 @@ img {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .card__title {
     font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
     font-size: 1.29rem;
     margin-top: 0;
     margin-bottom: 0.7rem;
@@ -880,6 +889,36 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
+  .modal__input--light::-webkit-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.285rem;
+    line-height: 1.714rem;
+    color: #fff; }
+  .modal__input--light::-moz-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.285rem;
+    line-height: 1.714rem;
+    color: #fff; }
+  .modal__input--light:-ms-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.285rem;
+    line-height: 1.714rem;
+    color: #fff; }
+  .modal__input--light::-ms-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.285rem;
+    line-height: 1.714rem;
+    color: #fff; }
+  .modal__input--light::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.285rem;
+    line-height: 1.714rem;
+    color: #fff; }
   .modal__input-group {
     display: flex;
     flex-direction: column;
@@ -925,9 +964,12 @@ img {
     color: #E3B873;
     text-transform: uppercase;
     margin-bottom: 0.64rem; }
-  .swiper-slide___value {
+  .swiper-slide__value {
     font-size: 1.07rem;
     line-height: 1.428rem; }
+  .swiper-slide__img {
+    width: 48.5rem;
+    max-height: 34.42rem; }
 
 .swiper-pagination {
   top: -1rem; }
@@ -1073,6 +1115,8 @@ img {
       margin: auto;
       margin-bottom: 1.8rem;
       max-width: 42.07rem; }
+    .footer__contacts__phone {
+      color: #E3B873; }
     .footer__contacts-icon {
       display: flex;
       justify-content: center; }
@@ -1202,6 +1246,9 @@ img {
       color: #fff; } }
 
 @media screen and (max-width: 760px) {
+  .container {
+    width: 90%;
+    margin: auto; }
   .row {
     flex-direction: column;
     align-items: center;
@@ -1360,7 +1407,7 @@ img {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 7.08rem;
       margin-bottom: 5.08rem; }
     .hero__title {
       font-size: 2rem;
@@ -1384,6 +1431,10 @@ img {
     padding-bottom: 12rem;
     background-color: #131313;
     color: #fff; }
+    .control__video {
+      max-width: 28.33rem;
+      min-height: 17.25rem;
+      background: #131313 url("../img/video-mask.jpg") no-repeat center/cover; }
     .control__label {
       color: #fff;
       font-style: normal;
@@ -1401,36 +1452,43 @@ img {
       display: flex;
       flex-direction: column;
       margin-bottom: 5rem; }
-    .control__input--dark::-webkit-input-placeholder {
+    .control__input--dark {
+      color: #fff;
       font-style: normal;
       font-weight: normal;
       font-size: 1.5rem;
       line-height: 138.72%;
-      color: #fff; }
-    .control__input--dark::-moz-placeholder {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.5rem;
-      line-height: 138.72%;
-      color: #fff; }
-    .control__input--dark:-ms-input-placeholder {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.5rem;
-      line-height: 138.72%;
-      color: #fff; }
-    .control__input--dark::-ms-input-placeholder {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.5rem;
-      line-height: 138.72%;
-      color: #fff; }
-    .control__input--dark::placeholder {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.5rem;
-      line-height: 138.72%;
-      color: #fff; }
+      padding-top: 0; }
+      .control__input--dark::-webkit-input-placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 138.72%;
+        color: #fff; }
+      .control__input--dark::-moz-placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 138.72%;
+        color: #fff; }
+      .control__input--dark:-ms-input-placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 138.72%;
+        color: #fff; }
+      .control__input--dark::-ms-input-placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 138.72%;
+        color: #fff; }
+      .control__input--dark::placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 138.72%;
+        color: #fff; }
     .control__button {
       text-align: center;
       order: 1;
@@ -1443,7 +1501,8 @@ img {
       outline: none;
       box-sizing: border-box; }
     .control__policy {
-      margin-top: -4rem;
+      margin-top: -4.5rem;
+      margin-left: 0rem;
       margin-bottom: 1.1rem; }
       .control__policy-label {
         justify-content: start;
@@ -1452,9 +1511,6 @@ img {
         font-weight: normal;
         font-size: 1.333rem;
         line-height: 1.833rem; }
-    .control ec {
-      margin-left: 25rem;
-      margin-top: -0.5rem; }
     .control__video {
       max-width: 90%;
       min-height: 21.25‬rem;
@@ -1469,7 +1525,7 @@ img {
       font-style: normal;
       font-weight: normal;
       font-size: 1.166rem;
-      line-height: 169.8%; }
+      line-height: 165%; }
       .control__text::before {
         content: '';
         display: block;
@@ -1479,6 +1535,12 @@ img {
         height: 2px;
         background-color: #E3B873;
         border-radius: 30px; }
+  ec {
+    position: absolute;
+    display: block;
+    color: tomato;
+    margin-top: 1.5rem;
+    margin-left: 10rem; }
   .label {
     color: #fff;
     font-style: normal;
@@ -1493,7 +1555,7 @@ img {
     padding-top: 27.5rem;
     background-color: #131313; }
     .design__description {
-      max-width: 25.5‬rem;
+      max-width: 24rem;
       padding-top: 1.5rem;
       padding-bottom: 3.5rem;
       color: #fff;

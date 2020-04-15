@@ -56,6 +56,7 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
+        maxlength: 15,
       },
       userPhone: {
         required: true,
@@ -77,7 +78,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Имя обязательно",
-        minlength: "Имя не короче двух букв" 
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее 15 букв"
       }, 
       userPhone: {
         required: "Телефон обязателен",
@@ -113,6 +115,7 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
+        maxlength: 15,
       },
       userPhone: {
         required: true,
@@ -129,7 +132,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Имя обязательно",
-        minlength: "Имя не короче двух букв" 
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее 15 букв" 
       }, 
       userPhone: {
         required: "Телефон обязателен",
@@ -159,8 +163,13 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
+        maxlength: 15,
       },
       userPhone: {
+        required: true,
+        minlength: 10,
+      },
+      userQuestion: {
         required: true,
         minlength: 10,
       },
@@ -175,11 +184,16 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Имя обязательно",
-        minlength: "Имя не короче двух букв" 
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее 15 букв" 
       }, 
       userPhone: {
         required: "Телефон обязателен",
         minlength: "Введите телефон полностью" 
+      },
+      userQuestion: {
+        required: "Хочешь спросить - спрашивай",
+        minlength: "Напиши больше" 
       },
       policyCheckbox: "Согласитесь с обработкой данных"
     },
@@ -222,7 +236,7 @@ YaMapsShown = false;
 $(document).ready(function (){
   $(window).scroll(function() {
     if (!YaMapsShown){
-     if($(window).scrollTop() + $(window).height() > $(document).height() - 700) {      
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 500) {      
       showYaMaps();
       YaMapsShown = true;
      }
