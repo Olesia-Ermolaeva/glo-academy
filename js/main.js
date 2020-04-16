@@ -38,15 +38,19 @@ $(document).ready(function () {
   new WOW().init();
 
   //плавная прокрутка вверх
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-        if ($('#upbutton').is(':hidden')) {
-            $('#upbutton').css({opacity : 1}).fadeIn('slow');
-        }
-    } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 70) {
+      $('#upbutton').fadeIn();
+    } else {
+      $('#upbutton').fadeOut();
+    }
   });
-  $('#upbutton').click(function() {
-    $('html, body').stop().animate({scrollTop : 0}, 300);
+
+  $('#upbutton').click(function () {
+  $("html, body").animate({
+    scrollTop: 0
+  }, 600);
+  return false;
   });
 
   //валидация формы модального окна
@@ -236,7 +240,7 @@ YaMapsShown = false;
 $(document).ready(function (){
   $(window).scroll(function() {
     if (!YaMapsShown){
-     if($(window).scrollTop() + $(window).height() > $(document).height() - 500) {      
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 700) {      
       showYaMaps();
       YaMapsShown = true;
      }
@@ -247,7 +251,7 @@ $(document).ready(function (){
 function showYaMaps(){
   var script   = document.createElement("script");
   script.type  = "text/javascript";
-  script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd34938594550b3ce2d66bcb5f2a1d7f673189f8678aa2a77ba2c843bf53da47&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false";
+  script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd34938594550b3ce2d66bcb5f2a1d7f673189f8678aa2a77ba2c843bf53da47&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false";
   document.getElementById("YaMaps").appendChild(script);
 }
 
