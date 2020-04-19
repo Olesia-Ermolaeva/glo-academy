@@ -550,7 +550,8 @@ img {
   color: #E3B873;
   text-transform: uppercase;
   font-size: 1.075rem;
-  transition: 0.2s; }
+  transition: 0.2s;
+  margin-right: 2rem; }
   .logo:hover {
     color: #fff; }
 
@@ -806,7 +807,8 @@ img {
 .types__card {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-right: 1rem; }
   .types__card__text {
     position: relative;
     margin-top: -9.3rem;
@@ -860,7 +862,8 @@ img {
   .design__card {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin-right: 1rem; }
     .design__card__text {
       position: relative;
       margin-top: -9.3rem;
@@ -1235,6 +1238,18 @@ img {
     margin: 0;
     margin-bottom: 2.428rem; }
 
+@media screen and (max-width: 1450px) {
+  .nav__item {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+    transition: 0.2s; }
+    .nav__item:hover {
+      color: #E3B873; }
+  .contacts__phone {
+    margin-right: 1rem; } }
+
 @media screen and (max-width: 1413px) {
   .nav__item {
     color: #fff;
@@ -1254,10 +1269,18 @@ img {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    margin-right: 0.5rem;
+    margin-right: 0.2rem;
     transition: 0.2s; }
     .nav__item:hover {
       color: #E3B873; }
+  .logo {
+    color: #E3B873;
+    text-transform: uppercase;
+    font-size: 1.075rem;
+    transition: 0.2s;
+    margin-right: 1rem; }
+    .logo:hover {
+      color: #fff; }
   .contacts__phone {
     margin-right: 1rem; } }
 
