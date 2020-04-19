@@ -25,32 +25,34 @@ const tinypng = require('gulp-tinypng-compress');
 
 // Clean CSS
 function buildCSS(done) {
-    src('css/**/**.css')
+    src('css/**/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(dest('dist/css/'));
     done();
 }
 
 function buildJS(done) {
-    src(['js/**.js', '!js/**.min.js'])
+    src(['js/*.js'])
         .pipe(minify({ext:{
                 min:'.js'
-            }
+            },
+            ignoreFiles: ['.min.js'],
+            noSource: true
         }))
         .pipe(dest('dist/js/'));
-    src('js/**.min.js').pipe(dest('dist/js/'));
+    src('js/*.min.js').pipe(dest('dist/js/'));
     done();
 }
 
 function html(done) {
-    src('**.html')
+    src('*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest('dist/'));
     done();
 }
 
 function php(done) {
-    src('**.php')
+    src('*.php')
         .pipe(dest('dist/'));
     src('phpmailer/**/**')
     .pipe(dest('dist/phpmailer/'));

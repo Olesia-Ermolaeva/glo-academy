@@ -60,11 +60,11 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
-        maxlength: 15,
+        maxlength: 15
       },
       userPhone: {
         required: true,
-        minlength: 10,
+        minlength: 10
       },
       // правило-объект
       userEmail: {
@@ -119,11 +119,11 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
-        maxlength: 15,
+        maxlength: 15
       },
       userPhone: {
         required: true,
-        minlength: 10,
+        minlength: 10
       },
       // валидация чекбокса
       policyCheckbox: {
@@ -167,15 +167,15 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
-        maxlength: 15,
+        maxlength: 15
       },
       userPhone: {
         required: true,
-        minlength: 10,
+        minlength: 10
       },
       userQuestion: {
         required: true,
-        minlength: 10,
+        minlength: 10
       },
       // валидация чекбокса
       policyCheckbox: {
@@ -219,6 +219,7 @@ $(document).ready(function () {
 
   // маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
+  //видеоплеер
   var player;
   $('.video__play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -236,6 +237,7 @@ $(document).ready(function () {
   }
 });
 
+//загрузка карты
 YaMapsShown = false;
 $(document).ready(function (){
   $(window).scroll(function() {

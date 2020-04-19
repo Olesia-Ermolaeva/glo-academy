@@ -1,14 +1,45 @@
+@media screen and ( max-width: 1413px )
+  .nav
+    &__item
+      color: $light
+      text-decoration: none
+      text-transform: uppercase
+      margin-right: 0.5rem
+      transition: 0.2s
+      &:hover
+        color: $primary
+  .contacts
+    &__phone
+      margin-right: 1rem
 @media screen and ( max-width: 1250px )
   html
     font-size: 12px
   .nav
     &__item
+      color: $light
+      text-decoration: none
+      text-transform: uppercase
+      margin-right: 0.5rem
+      transition: 0.2s
+      &:hover
+        color: $primary
+  .contacts
+    &__phone
       margin-right: 1rem
-@media screen and ( max-width: 992px )
+@media screen and ( max-width: 994px )
   .wow
     transition-property: none !important
     transform: none !important
     animation: none !important
+  .row
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  .col-30
+    flex-basis: 100%
+    margin: auto
+  .col-50
+    width: 100%
   .nav
     display: none
   .button
@@ -26,32 +57,46 @@
       display: none
     &__content
       margin-left: 0
-    .card
+  .types
+    &__card
+      display: flex
+      margin: auto
+      margin-bottom: 7rem
+      align-items: start
+      &__text
+        align-self: start
+      &__image
+        align-self: start
       &__pricetag
         position: absolute
         left: 0
         bottom: -1.79rem
-        font-size: 0.8rem
+        font-size: 1.3rem
         font-family: 'Yeseva One', cursive
         text-transform: uppercase
         background-color: $primary
         color: $light
         box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
-  .card
-    &__pricetag
-      position: absolute
-      left: 0
-      bottom: -1.79rem
-      font-size: 1.25rem
-      font-family: 'Yeseva One', cursive
-      font-style: normal
-      font-weight: normal
-      text-transform: uppercase
-      line-height: 138.6%
-      background-color: $primary
-      color: $light
-      padding: 0.8rem 2rem
-      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
+  .design
+    &__card
+      display: flex
+      margin: auto
+      margin-bottom: 7rem
+      align-items: start
+      &__text
+        align-self: start
+      &__image
+        align-self: start
+      &__pricetag
+        position: absolute
+        left: 0
+        bottom: -1.79rem
+        font-size: 1.3rem
+        font-family: 'Yeseva One', cursive
+        text-transform: uppercase
+        background-color: $primary
+        color: $light
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
   .footer
     &__map
       margin: auto
@@ -60,6 +105,12 @@
       max-width: 66rem
       height: 465px
       min-height: 33.2rem
+    &__contacts
+      &-text
+        width: 70%
+        margin: auto
+        margin-top: 3rem
+        margin-bottom: 0.8rem
   .modal
     opacity: 0
     visibility: hidden
@@ -90,15 +141,6 @@
   .container
     width: 90%
     margin: auto
-  .row
-    flex-direction: column
-    align-items: center
-    justify-content: center
-  .col-30
-    flex-basis: 100%
-    width: 100%
-  .col-50
-    width: 100%
   .contacts
     &__phone
       margin-right: 0
@@ -123,53 +165,52 @@
       padding-top: 5rem
       padding-bottom: 1rem
     &__card
+      display: flex
+      margin: auto
+      flex-direction: column
+      align-items: start
       margin-bottom: 5rem
-  .card
-    display: flex
-    margin: auto
-    flex-direction: column
-    align-items: start
-    &__image
-    &__text
-      position: relative
-      margin-left: 0
-      margin-top: -12rem
-      margin-bottom: 7rem
-      width: 90%
-      max-width: 23.6rem
-      padding: 1.7rem 2.9rem
-      background-color: #fff
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
-    &__title
-      font-family: 'Yeseva One', cursive
-      font-style: normal
-      font-weight: normal
-      font-size: 1.25rem
-      line-height: 138.6%
-      margin-top: 0
-      margin-bottom: 1rem
-      color: $tird
-    &__list
-      padding: 0 0 0 1rem
-      margin: 0
-      font-size: 1.07rem
-      line-height: 1.79rem
-      color: $secondary
-      margin-bottom: 2.5rem
-    &__pricetag
-      position: absolute
-      left: 0
-      bottom: -1.79rem
-      font-size: 1.25rem
-      font-family: 'Yeseva One', cursive
-      font-style: normal
-      font-weight: normal
-      text-transform: uppercase
-      line-height: 138.6%
-      background-color: $primary
-      color: $light
-      padding: 0.8rem 2.75rem
-      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
+      &__image
+      &__text
+        position: relative
+        margin-left: 0
+        margin-top: -12rem
+        margin-bottom: 7rem
+        width: 90%
+        max-width: 23.6rem
+        padding: 1.7rem 2.9rem
+        background-color: #fff
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+      &__title
+        font-family: 'Yeseva One', cursive
+        font-style: normal
+        font-weight: normal
+        font-size: 1.25rem
+        line-height: 138.6%
+        margin-top: 0
+        margin-bottom: 1rem
+        color: $tird
+      &__list
+        padding: 0 0 0 1rem
+        margin: 0
+        font-size: 1.07rem
+        line-height: 1.79rem
+        color: $secondary
+        margin-bottom: 2.5rem
+      &__pricetag
+        position: absolute
+        left: 0
+        bottom: -1.79rem
+        font-size: 1.25rem
+        font-family: 'Yeseva One', cursive
+        font-style: normal
+        font-weight: normal
+        text-transform: uppercase
+        line-height: 138.6%
+        background-color: $primary
+        color: $light
+        padding: 0.8rem 2.75rem
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
   .projects
     padding-top: 3rem
     padding-bottom: 0
@@ -272,6 +313,7 @@
       margin-bottom: 2.66rem
     &__button
       display: block
+      width: 100%
       max-width: 100vh
       margin-bottom: 2.16rem
       font-weight: 500
@@ -285,14 +327,14 @@
     background-color: $dark
     color: $light
     &__video
-      max-width: 28.33rem
-      min-height: 17.25rem
+      width: 100%
+      height: 17.25rem
       background: $dark url('../img/video-mask.jpg') no-repeat center / cover
       &__play
         &__desctop
           display: none
         &__mobile
-          display: initial
+          display: inline-block
     &__label
       color: $light
       font-style: normal
@@ -402,7 +444,11 @@
     &__section-title
       color: $light
     &__card
-      margin-bottom: 0
+      display: flex
+      margin: auto
+      flex-direction: column
+      align-items: start
+      margin-bottom: 5rem
       &__pricetag
         position: absolute
         left: 0
@@ -415,7 +461,7 @@
         line-height: 138.6%
         background-color: $primary
         color: $light
-        padding: 0.8rem 4rem
+        padding: 0.8rem 3.9rem
         box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
   .footer
     background: $dark
@@ -425,18 +471,19 @@
       margin: auto
       margin-top: 16rem
       margin-bottom: 3rem
-      width: 340px
-      max-width: 28rem
+      width: 100%
       height: 225px
       min-height: 21.5rem
     &__wrap
       display: flex
       flex-direction: column
       justify-content: center
+      padding: 0
       &--black
         background: $dark
         flex-basis: 100%
         margin: 0
+        padding: 0
     &__title
       text-transform: uppercase
       font-family: 'Yeseva One', cursive
@@ -445,8 +492,14 @@
       font-size: 1.666rem
       line-height: 2.33rem
       text-align: center
-      margin-bottom: 4rem
+      margin-bottom: 4.5rem
       margin-top: 0
+    &__contacts
+      &-text
+        width: 80%
+        margin: auto
+        margin-top: 0
+        margin-bottom: 4rem
     &__form
       display: flex
       flex-direction: column
@@ -474,18 +527,18 @@
         font-weight: normal
         font-size: 1.07rem
         line-height: 1.428rem
-      &__policy
-        flex-basis: 100%
-        margin: 0
-        margin-bottom: 5rem
-        &__label
-          justify-content: start
-          &--center
-            margin-left: 0
-            font-style: normal
-            font-weight: normal
-            font-size: 1.33rem
-            line-height: 1.83rem
+    &__policy
+      flex-basis: 100%
+      margin: 0
+      margin-bottom: 3rem
+      &__label
+        justify-content: start
+        &--center
+          margin-left: 0
+          font-style: normal
+          font-weight: normal
+          font-size: 1.33rem
+          line-height: 1.83rem
     &__menu
       display: none
     &__button
@@ -499,7 +552,6 @@
     &__contacts
       order: 1 
       &-text
-        max-width: 75%
         font-size: 1.5rem
         line-height: 138.6%
         text-align: center
@@ -550,12 +602,17 @@
     padding-top: 0
     &__map
       margin: auto
-      margin-top: 16rem
+      margin-top: 13.5rem
       margin-bottom: 3rem
-      width: 270px
-      max-width: 28rem
+      width: 100%
       height: 225px
       min-height: 21.5rem
+    &__contacts
+      &-text
+        width: 100%
+        margin: auto
+        margin-top: 0
+        margin-bottom: 2rem
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down

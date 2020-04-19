@@ -1,42 +1,3 @@
-.row
-  display: flex
-  align-items: flex-start
-  justify-content: space-between
-.col
-  flex-basis: 32%
-.card
-  &__text
-    position: relative
-    margin: 0 auto
-    margin-top: -9.3rem
-    max-width: 23.6rem
-    padding: 1.79rem 2.14rem
-    background-color: #fff
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
-  &__title
-    font-family: 'Yeseva One', cursive
-    font-size: 1.29rem
-    margin-top: 0
-    margin-bottom: 0.7rem
-    color: $tird
-  &__list
-    padding: 0 0 0 1rem
-    margin: 0
-    font-size: 1.07rem
-    line-height: 1.79rem
-    color: $secondary
-    margin-bottom: 2.5rem
-  &__pricetag
-    position: absolute
-    left: 0
-    bottom: -1.79rem
-    font-size: 1.29rem
-    font-family: 'Yeseva One', cursive
-    text-transform: uppercase
-    background-color: $primary
-    color: $light
-    padding: 1.214rem 4rem
-    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
 .design
   padding-bottom: 20rem
   &__description
@@ -49,5 +10,48 @@
     margin: auto
     margin-bottom: 0
     text-align: center
+  &__card
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__text
+      position: relative
+      margin-top: -9.3rem
+      width: 90%
+      max-width: 23.6rem
+      padding: 1.79rem 2.14rem
+      background-color: #fff
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+    &__title
+      font-family: 'Yeseva One', cursive
+      font-style: normal
+      font-weight: normal
+      font-size: 1.29rem
+      margin-top: 0
+      margin-bottom: 0.7rem
+      color: $tird
+    &__list
+      padding: 0 0 0 1rem
+      margin: 0
+      font-size: 1.07rem
+      line-height: 1.79rem
+      color: $secondary
+      margin-bottom: 2.5rem
+    &__pricetag
+      position: absolute
+      left: 0
+      bottom: -1.79rem
+      font-size: 1.29rem
+      font-family: 'Yeseva One', cursive
+      font-style: normal
+      font-weight: normal
+      text-transform: uppercase
+      background-color: $primary
+      color: $light
+      padding-right: 6rem
+      padding-left: 2rem
+      padding-top: 1.214rem
+      padding-bottom: 1.214rem
+      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1)
 
 
