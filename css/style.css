@@ -567,7 +567,10 @@ img {
   color: #E3B873; }
 
 .contacts__phone {
-  margin-right: 3.214rem; }
+  margin-right: 3.214rem;
+  transition: 0.2s; }
+  .contacts__phone:hover {
+    color: #fff; }
 
 .hero {
   position: relative;
@@ -642,7 +645,10 @@ img {
     background-color: #131313;
     text-transform: uppercase;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: 0.2s; }
+    .hero__scroll-down:hover {
+      color: #E3B873; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -788,7 +794,11 @@ img {
   font-style: normal;
   font-weight: 500;
   font-size: 1.07rem;
-  line-height: 1.285rem; }
+  line-height: 1.285rem;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.4);
+  transition: box-shadow 0.3s; }
+  .control__button:hover {
+    box-shadow: none; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -1176,7 +1186,11 @@ img {
       .footer__contacts-icon-item {
         margin-top: 1rem;
         margin-left: 0.5rem;
-        margin-right: 0.5rem; }
+        margin-right: 0.5rem;
+        transition: 0.4s; }
+        .footer__contacts-icon-item:hover {
+          -webkit-filter: drop-shadow(0 5px 5px #E3B873);
+          filter: drop-shadow(0 5px 5px #E3B873); }
       .footer__contacts-icon-mobile {
         display: none; }
 
